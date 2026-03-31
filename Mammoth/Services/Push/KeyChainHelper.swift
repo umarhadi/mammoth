@@ -22,7 +22,7 @@ struct KeyChainHelper {
         var error: Unmanaged<CFError>?
         
         // Define the private key attribute
-        let privateKeyTag = "com.theblvd.mammoth.privateKey.\(deviceToken)"
+        let privateKeyTag = "dev.umarhadi.mammoth.privateKey.\(deviceToken)"
 
         let privateKeyAttributes: [CFString: Any] = [
             kSecAttrIsPermanent: true,
@@ -62,7 +62,7 @@ struct KeyChainHelper {
     }
     
     static func retrieveKeyPair(forDeviceToken deviceToken: String) throws -> (privateKey: SecKey, publicKey: SecKey)? {
-        let privateKeyTag = "com.theblvd.mammoth.privateKey.\(deviceToken)"
+        let privateKeyTag = "dev.umarhadi.mammoth.privateKey.\(deviceToken)"
         let query: [CFString: Any] = [
             kSecClass: kSecClassKey,
             kSecAttrApplicationTag: privateKeyTag,

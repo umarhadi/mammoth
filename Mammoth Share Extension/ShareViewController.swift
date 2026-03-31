@@ -47,7 +47,7 @@ class ShareViewController: UIViewController {
                     if error == nil, let self = self {
                         let theData: String? = (data as? URL ?? URL(string: "www.google.com"))?.absoluteString ?? ""
                         DispatchQueue.main.async {
-                            let userDefaults = UserDefaults(suiteName: "group.com.theblvd.mammoth.wormhole")
+                            let userDefaults = UserDefaults(suiteName: "group.dev.umarhadi.mammoth.wormhole")
                             userDefaults?.set(theData, forKey: "shareExtensionText")
                             userDefaults?.synchronize()
                             self.redirect(key: "shareExtensionText")
@@ -57,7 +57,7 @@ class ShareViewController: UIViewController {
             } else if let x = content.attributedContentText {
                 let theData: String? = x.string
                 DispatchQueue.main.async {
-                    let userDefaults = UserDefaults(suiteName: "group.com.theblvd.mammoth.wormhole")
+                    let userDefaults = UserDefaults(suiteName: "group.dev.umarhadi.mammoth.wormhole")
                     userDefaults?.set(theData, forKey: "shareExtensionText")
                     userDefaults?.synchronize()
                     self.redirect(key: "shareExtensionText")
@@ -75,7 +75,7 @@ class ShareViewController: UIViewController {
                             DispatchQueue.main.async {
                                 let fileContent = theData ?? Data()
                                 let sharedGroupContainerDirectory = FileManager().containerURL(
-                                  forSecurityApplicationGroupIdentifier: "group.com.theblvd.mammoth.wormhole")
+                                  forSecurityApplicationGroupIdentifier: "group.dev.umarhadi.mammoth.wormhole")
                                 guard let fileURL = sharedGroupContainerDirectory?.appendingPathComponent("savedMedia.json") else { return }
                                 try? fileContent.write(to: fileURL)
                                 if let _ = try? Data(contentsOf: fileURL) {
@@ -100,7 +100,7 @@ class ShareViewController: UIViewController {
                             DispatchQueue.main.async {
                                 let fileContent = theData ?? Data()
                                 let sharedGroupContainerDirectory = FileManager().containerURL(
-                                  forSecurityApplicationGroupIdentifier: "group.com.theblvd.mammoth.wormhole")
+                                  forSecurityApplicationGroupIdentifier: "group.dev.umarhadi.mammoth.wormhole")
                                 guard let fileURL = sharedGroupContainerDirectory?.appendingPathComponent("savedMedia.json") else { return }
                                 try? fileContent.write(to: fileURL)
                                 if let _ = try? Data(contentsOf: fileURL) {

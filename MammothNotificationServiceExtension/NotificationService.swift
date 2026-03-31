@@ -55,7 +55,7 @@ class NotificationService: UNNotificationServiceExtension {
                 log.debug("\(processID()) " + "able to decrypt: \(request.identifier)")
                 // shared with the main app's AppDelegate
                 DispatchQueue.main.async {
-                    let userDefaults = UserDefaults(suiteName: "group.com.theblvd.mammoth.wormhole")
+                    let userDefaults = UserDefaults(suiteName: "group.dev.umarhadi.mammoth.wormhole")
                     userDefaults?.set("\(content.notificationId)", forKey: "notificationId")
                 }
                 

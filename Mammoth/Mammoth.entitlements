@@ -20,7 +20,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.theblvd.mammoth.wormhole</string>
+		<string>group.dev.umarhadi.mammoth.wormhole</string>
 	</array>
 	<key>com.apple.security.device.camera</key>
 	<true/>

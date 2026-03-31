@@ -8,16 +8,16 @@
 
 struct CloudSyncConstants {
     struct Keys {
-        static let kLastFollowingSyncDate = "com.theblvd.mammoth.icloud.following.lastsync"
-        static let kLastFollowingSyncID = "com.theblvd.mammoth.icloud.following.syncid"
-        static let kLastForYouSyncDate = "com.theblvd.mammoth.icloud.foryou.lastsync"
-        static let kLastForYouSyncID = "com.theblvd.mammoth.icloud.foryou.syncid"
-        static let kLastFederatedSyncDate = "com.theblvd.mammoth.icloud.federated.lastsync"
-        static let kLastFederatedSyncID = "com.theblvd.mammoth.icloud.federated.syncid"
-        static let kLastMentionsInSyncDate = "com.theblvd.mammoth.icloud.mentionsIn.lastsync"
-        static let kLastMentionsInSyncID = "com.theblvd.mammoth.icloud.mentionsIn.syncid"
-        static let kLastMentionsOutSyncDate = "com.theblvd.mammoth.icloud.mentionsOut.lastsync"
-        static let kLastMentionsOutSyncID = "com.theblvd.mammoth.icloud.mentionsOut.syncid"
+        static let kLastFollowingSyncDate = "dev.umarhadi.mammoth.icloud.following.lastsync"
+        static let kLastFollowingSyncID = "dev.umarhadi.mammoth.icloud.following.syncid"
+        static let kLastForYouSyncDate = "dev.umarhadi.mammoth.icloud.foryou.lastsync"
+        static let kLastForYouSyncID = "dev.umarhadi.mammoth.icloud.foryou.syncid"
+        static let kLastFederatedSyncDate = "dev.umarhadi.mammoth.icloud.federated.lastsync"
+        static let kLastFederatedSyncID = "dev.umarhadi.mammoth.icloud.federated.syncid"
+        static let kLastMentionsInSyncDate = "dev.umarhadi.mammoth.icloud.mentionsIn.lastsync"
+        static let kLastMentionsInSyncID = "dev.umarhadi.mammoth.icloud.mentionsIn.syncid"
+        static let kLastMentionsOutSyncDate = "dev.umarhadi.mammoth.icloud.mentionsOut.lastsync"
+        static let kLastMentionsOutSyncID = "dev.umarhadi.mammoth.icloud.mentionsOut.syncid"
     }
 }
 

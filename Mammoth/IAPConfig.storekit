@@ -94,7 +94,7 @@
               "locale" : "en_US"
             }
           ],
-          "productID" : "com.theblvd.mammoth.gold.monthly",
+          "productID" : "dev.umarhadi.mammoth.gold.monthly",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "Monthly Supporter",
           "subscriptionGroupID" : "21417299",
@@ -119,7 +119,7 @@
               "locale" : "en_US"
             }
           ],
-          "productID" : "com.theblvd.mammoth.gold.yearly",
+          "productID" : "dev.umarhadi.mammoth.gold.yearly",
           "recurringSubscriptionPeriod" : "P1Y",
           "referenceName" : "Yearly Supporter",
           "subscriptionGroupID" : "21417299",

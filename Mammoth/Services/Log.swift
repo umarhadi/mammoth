@@ -112,7 +112,7 @@ class Log {
     static func pushLogFilePathURL() -> URL? {
         // For the notification extension, use a shared file location
         let sharedGroupContainerDirectory = FileManager().containerURL(
-            forSecurityApplicationGroupIdentifier: "group.com.theblvd.mammoth.wormhole")
+            forSecurityApplicationGroupIdentifier: "group.dev.umarhadi.mammoth.wormhole")
         if let fileURL = sharedGroupContainerDirectory?.appendingPathComponent("Mammoth Push Log.txt") {
             return fileURL
         } else {

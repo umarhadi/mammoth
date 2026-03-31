@@ -576,7 +576,7 @@ class NewPostViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func addMediaFromShare() {
         let sharedGroupContainerDirectory = FileManager().containerURL(
-            forSecurityApplicationGroupIdentifier: "group.com.theblvd.mammoth.wormhole")
+            forSecurityApplicationGroupIdentifier: "group.dev.umarhadi.mammoth.wormhole")
         guard let fileURL = sharedGroupContainerDirectory?.appendingPathComponent("savedMedia.json") else { return }
         guard let fileContent = try? Data(contentsOf: fileURL) else { return }
         
@@ -606,7 +606,7 @@ class NewPostViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func addVideosFromShare() {
         let sharedGroupContainerDirectory = FileManager().containerURL(
-            forSecurityApplicationGroupIdentifier: "group.com.theblvd.mammoth.wormhole")
+            forSecurityApplicationGroupIdentifier: "group.dev.umarhadi.mammoth.wormhole")
         guard let fileURL = sharedGroupContainerDirectory?.appendingPathComponent("savedMedia.json") else { return }
         guard let fileContent = try? Data(contentsOf: fileURL) else { return }
         
@@ -640,7 +640,7 @@ class NewPostViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func addTextFromShare() {
-        let userDefaults = UserDefaults(suiteName: "group.com.theblvd.mammoth.wormhole")
+        let userDefaults = UserDefaults(suiteName: "group.dev.umarhadi.mammoth.wormhole")
         if let theData = userDefaults?.value(forKey: "shareExtensionText") as? String {
             self.cellPostText = theData
             self.cellPostTextView?.resignFirstResponder()

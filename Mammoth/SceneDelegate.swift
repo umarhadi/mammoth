@@ -185,7 +185,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-        if userActivity.activityType == "com.theblvd.mammoth.new" {
+        if userActivity.activityType == "dev.umarhadi.mammoth.new" {
             NotificationCenter.default.post(name: Notification.Name(rawValue: "gotoN"), object: self)
         }
     }
@@ -266,16 +266,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        if shortcutItem.type == "com.theblvd.mammoth.post" {
+        if shortcutItem.type == "dev.umarhadi.mammoth.post" {
             NotificationCenter.default.post(name: Notification.Name(rawValue: "gotoN"), object: self)
             completionHandler(true)
-        } else if shortcutItem.type == "com.theblvd.mammoth.home" {
+        } else if shortcutItem.type == "dev.umarhadi.mammoth.home" {
             NotificationCenter.default.post(name: Notification.Name(rawValue: "gotoH"), object: self)
             completionHandler(true)
-        } else if shortcutItem.type == "com.theblvd.mammoth.community" {
+        } else if shortcutItem.type == "dev.umarhadi.mammoth.community" {
             NotificationCenter.default.post(name: Notification.Name(rawValue: "gotoC"), object: self)
             completionHandler(true)
-        } else if shortcutItem.type == "com.theblvd.mammoth.everything" {
+        } else if shortcutItem.type == "dev.umarhadi.mammoth.everything" {
             NotificationCenter.default.post(name: Notification.Name(rawValue: "gotoE"), object: self)
             completionHandler(true)
         }

@@ -188,14 +188,14 @@ class SiriSettingsViewController: UIViewController, UITableViewDataSource, UITab
             self.latestTapped = indexPath.row
             
             if self.latestTapped == 0 {
-                let activity1 = NSUserActivity(activityType: "com.theblvd.mammoth.new")
+                let activity1 = NSUserActivity(activityType: "dev.umarhadi.mammoth.new")
                 activity1.title = NSLocalizedString("settings.siriShortcuts.compose", comment: "")
                 let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
                 attributes.contentDescription = NSLocalizedString("settings.siriShortcuts.compose", comment: "")
                 activity1.contentAttributeSet = attributes
                 activity1.isEligibleForSearch = true
                 activity1.isEligibleForPrediction = true
-                activity1.persistentIdentifier = "com.theblvd.mammoth.new"
+                activity1.persistentIdentifier = "dev.umarhadi.mammoth.new"
                 activity1.suggestedInvocationPhrase = NSLocalizedString("settings.siriShortcuts.compose", comment: "")
                 activity1.persistentIdentifier = String(self.latestTapped)
                 self.view.userActivity = activity1

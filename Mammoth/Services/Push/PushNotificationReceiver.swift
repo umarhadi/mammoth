@@ -188,7 +188,7 @@ extension PushNotificationReceiver {
     
     
     static func setState(state: PushNotificationState?, for accountID: String) {
-        if let userDefaults = UserDefaults(suiteName: "group.com.theblvd.mammoth.wormhole" ) {
+        if let userDefaults = UserDefaults(suiteName: "group.dev.umarhadi.mammoth.wormhole" ) {
             // Get the state dictionary...
             var stateDict: [String:Data]?
             stateDict = userDefaults.object(forKey: PushNotificationStatesKey) as? [String:Data]
@@ -213,7 +213,7 @@ extension PushNotificationReceiver {
     }
     
     static func getAllStates() -> [PushNotificationState] {
-         if let userDefaults = UserDefaults(suiteName: "group.com.theblvd.mammoth.wormhole" ) {
+         if let userDefaults = UserDefaults(suiteName: "group.dev.umarhadi.mammoth.wormhole" ) {
              guard let stateDict = userDefaults.object(forKey: PushNotificationStatesKey) as? [String:Data] else {
                  
                  // In version 2.0 we started storing states under a different key.
@@ -249,7 +249,7 @@ extension PushNotificationReceiver {
 // We force the instance to unsubscribe from push notifications for these accounts are clear the old (deprecated) states from disk.
 extension PushNotificationReceiver {
     static func hasDeprecatedState(for accountID: String) -> Bool {
-         if let userDefaults = UserDefaults(suiteName: "group.com.theblvd.mammoth.wormhole" ) {
+         if let userDefaults = UserDefaults(suiteName: "group.dev.umarhadi.mammoth.wormhole" ) {
              guard let stateDict = userDefaults.object(forKey: DeprecatedStatesKey) as? [String:Data] else {
                  return false
              }
@@ -264,7 +264,7 @@ extension PushNotificationReceiver {
     }
     
     static func clearAllDeprecatedStates() {
-         if let userDefaults = UserDefaults(suiteName: "group.com.theblvd.mammoth.wormhole" ) {
+         if let userDefaults = UserDefaults(suiteName: "group.dev.umarhadi.mammoth.wormhole" ) {
              guard let _ = userDefaults.object(forKey: DeprecatedStatesKey) as? [String:Data] else {
                  return
              }

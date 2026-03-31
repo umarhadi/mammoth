@@ -14,8 +14,8 @@ public let didUpdatePurchaseStatus = Notification.Name("didUpdatePurchaseStatus"
 class IAPManager: NSObject {
     static let shared = IAPManager()
     
-    static let GOLD_MONTH_PRODUCT_ID = "com.theblvd.mammoth.gold.monthly"
-    static let GOLD_YEAR_PRODUCT_ID = "com.theblvd.mammoth.gold.yearly"
+    static let GOLD_MONTH_PRODUCT_ID = "dev.umarhadi.mammoth.gold.monthly"
+    static let GOLD_YEAR_PRODUCT_ID = "dev.umarhadi.mammoth.gold.yearly"
     
     public enum IAPManagerAlertType {
         case disabled
@@ -184,18 +184,18 @@ extension IAPManager {
     
     @discardableResult
     private static func storePurchase(purchaseId: String) -> Bool {
-        return KeyChainHelper.saveStringToKeychain(service: "com.theblvd.mammoth", key: "mammoth_gold_plan", value: purchaseId)
+        return KeyChainHelper.saveStringToKeychain(service: "dev.umarhadi.mammoth", key: "mammoth_gold_plan", value: purchaseId)
     }
     
     private static func loadPurchase() -> String? {
-        return KeyChainHelper.getStringFromKeychain(service: "com.theblvd.mammoth", key: "mammoth_gold_plan")
+        return KeyChainHelper.getStringFromKeychain(service: "dev.umarhadi.mammoth", key: "mammoth_gold_plan")
     }
     
     private func syncLocalPurchaseState() async {
         if Self.isGoldMember == true {
             let isValidReceipt = await self.isReceiptValid()
             if !isValidReceipt {
-                KeyChainHelper.deleteStringFromKeychain(service: "com.theblvd.mammoth", key: "mammoth_gold_plan")
+                KeyChainHelper.deleteStringFromKeychain(service: "dev.umarhadi.mammoth", key: "mammoth_gold_plan")
             }
         }
     }

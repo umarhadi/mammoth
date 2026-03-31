@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         DispatchQueue.main.async {
             if GlobalStruct.activityBadges {
-                let userDefaults = UserDefaults(suiteName: "group.com.theblvd.mammoth.wormhole")
+                let userDefaults = UserDefaults(suiteName: "group.dev.umarhadi.mammoth.wormhole")
                 let id = userDefaults?.value(forKey: "notificationId") as? String ?? ""
                 self.checkNotificationTypeForID(id)
             }
